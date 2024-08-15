@@ -1,3 +1,9 @@
+import HeaderComponent from "../components/HeaderComponent/HeaderComponent"
 export  function Home(){
-    return <h2>Home</h2>
+   return (
+   <>
+   <HeaderComponent>
+   </HeaderComponent>
+   </>)
+
 }

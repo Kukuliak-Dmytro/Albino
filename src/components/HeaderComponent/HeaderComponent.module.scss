@@ -1,0 +1,12 @@
+// @use '../../App';
+// @include App.centeredContent;
+
+.headerWrapper{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: aliceblue;
+
+}
