@@ -1,0 +1,21 @@
+@use '../../App';
+.buttonWrapper {
+    @include App.centeredContent;
+    background-color: App.$secondaryColor;
+    color: App.$FontSecondaryColorLight;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: 600;
+    border: none;
+    height: 50px;
+    width: 200px;
+    transition: 0.3s;
+    &:hover{
+        scale:1.05;
+    }
+    &:active{
+        scale:0.95
+    }
+}

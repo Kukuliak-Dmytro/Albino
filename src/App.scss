@@ -1,8 +1,16 @@
+$primaryColor:#161C2D;
+$secondaryColor:#473BF0;
+$fontPrimaryColor:#161C2D;
+$fontPrimaryColorLight:rgba(22, 28, 45, 0.5);
+$FontSecondaryColor:#FFFFFF;
+$FontSecondaryColorLight:#FFFFFF;
+
 * {
   padding: 0px;
   margin: 0px;
   box-sizing: border-box;
   font-family: Montserrat;
+  color:$primaryColor
 
 }
 
@@ -34,5 +42,6 @@ h6 {
 @mixin centeredContent {
   display: flex;
   text-align: center;
+  align-items: center;
   justify-content: center;
 }
