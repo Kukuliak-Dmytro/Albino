@@ -1,5 +1,5 @@
 import styles from './HeaderComponent.module.scss'
-import Button from '../Button/Button'
+import Button from '../Buttons/Button'
 export default function HeaderComponent(){
 return(
     <div className={styles.headerWrapper}>

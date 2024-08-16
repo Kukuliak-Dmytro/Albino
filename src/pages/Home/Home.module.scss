@@ -1,43 +1,65 @@
 @use '../../App';
 
-.heroWrapper{
+.heroWrapper {
     @include App.centeredContent;
     flex-direction: column;
     width: 100%;
     height: 1000px;
-    .heroText{
-        width: 50%;
-        h1{
-            padding-top: 75px;
-            padding-bottom: 25px;
-        }
-        p{  
-            margin: auto;
-            width: 80%;
-            color:App.$fontPrimaryColorLight;
-            padding-bottom: 50px;
 
+    .heroBox {
+        width: 50%;
+
+        .heroText {
+            width: 100%;
+
+            h1 {
+                padding-top: 75px;
+                padding-bottom: 25px;
+            }
+
+            p {
+                margin: auto;
+                width: 80%;
+                color: App.$fontPrimaryColorLight;
+                padding-bottom: 50px;
+
+            }
+
+            span {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 50%;
+                margin: auto;
+                padding-bottom: 100px;
+
+                h6 {
+                    font-size: 17px;
+                }
+            }
         }
-        span{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 50%;
-            margin: auto;
-            padding-bottom: 100px;
-            h6{
-                font-size: 17px;
+
+
+        .heroImg {
+
+            width: 100%;
+            height: auto;
+
+            img {
+                width: 100%;
+                height: auto;
             }
         }
     }
-    .heroImg 
-    {
+}
 
-        width: 50%;
-        height: auto;      
-        img{
-            width: 100%;
-            height: auto;
-        }
+.featuresWrapper {
+    @include App.centeredContent;
+    .featuresBox{
+        display: flex;
+        width: 70%;
+        justify-content: space-between;
+
     }
+
 }

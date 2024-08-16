@@ -1,0 +1,18 @@
+@use '../../../App';
+.cardWrapper{
+   text-align: left;
+   width: auto;
+    img{
+        height: 40px;
+        width: auto;
+    }
+    p{
+        font-size: 17px;
+        color:App.$fontPrimaryColorLight ;
+        width: 300px;
+    }
+    h6{
+        padding-top: 20px;
+        padding-bottom: 10px;
+    }
+}
