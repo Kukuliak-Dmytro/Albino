@@ -12,6 +12,7 @@
     height: 50px;
     width: 200px;
     transition: 0.3s;
+    white-space: nowrap;
     &:hover{
         scale:1.05;
     }

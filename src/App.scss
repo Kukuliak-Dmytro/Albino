@@ -1,7 +1,7 @@
 $primaryColor:#161C2D;
 $secondaryColor:#473BF0;
 $fontPrimaryColor:#161C2D;
-$fontPrimaryColorLight:rgba(22, 28, 45, 0.5);
+$fontPrimaryColorLight:rgba(22, 28, 45, 0.65);
 $FontSecondaryColor:#FFFFFF;
 $FontSecondaryColorLight:#FFFFFF;
 
@@ -37,6 +37,15 @@ h5 {
 h6 {
   font-size: 21px;
 
+}
+p{
+  font-size: 19px;
+}
+a{
+  text-decoration: none;
+  &:hover{
+    text-decoration: solid underline;
+  }
 }
 
 @mixin centeredContent {
