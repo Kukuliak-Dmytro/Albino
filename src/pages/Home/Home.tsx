@@ -15,7 +15,7 @@ export function Home() {
    return (
       <>
          <HeaderComponent />
-         {/* <div className={styles.heroWrapper}>
+         <div className={styles.heroWrapper}>
             <div className={styles.heroBox}>
                <div className={styles.heroText}>
                   <h1>Get things done by awesome remote team</h1>
@@ -36,7 +36,7 @@ export function Home() {
                <FeatureCard logoPath={featureImg2} headerText="Time tracking" paragraphText="With lots of unique blocks, you can easily build a page without coding. Build your next landing page. "/>
                <FeatureCard logoPath={featureImg3} headerText="Beautiful mobile app" paragraphText="With lots of unique blocks, you can easily build a page without coding. Build your next landing page. "/>
             </div>
-         </div> */}
+         </div>
 
       </>)
 
