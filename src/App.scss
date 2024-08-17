@@ -1,17 +1,16 @@
-$primaryColor:#161C2D;
-$secondaryColor:#473BF0;
-$fontPrimaryColor:#161C2D;
-$fontPrimaryColorLight:rgba(22, 28, 45, 0.65);
-$FontSecondaryColor:#FFFFFF;
-$FontSecondaryColorLight:#FFFFFF;
+$primaryColor: #161C2D;
+$secondaryColor: #473BF0;
+$fontPrimaryColor: #161C2D;
+$fontPrimaryColorLight: rgba(22, 28, 45, 0.65);
+$FontSecondaryColor: #FFFFFF;
+$FontSecondaryColorLight: #FFFFFF;
 
 * {
   padding: 0px;
   margin: 0px;
   box-sizing: border-box;
   font-family: Montserrat;
-  color:$primaryColor
-
+  color: $primaryColor
 }
 
 h1 {
@@ -38,13 +37,19 @@ h6 {
   font-size: 21px;
 
 }
-p{
-  font-size: 19px;
+
+p {
+  font-size: 17px;
+  line-height: calc(29/17);
   letter-spacing: -0.2px;
+  color: $fontPrimaryColorLight;
+  font-weight: 400;
 }
-a{
+
+a {
   text-decoration: none;
-  &:hover{
+
+  &:hover {
     text-decoration: solid underline;
   }
 }

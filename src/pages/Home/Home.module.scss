@@ -8,17 +8,21 @@
 
     .heroBox {
         width: 50%;
+
         @media (max-width:992px) {
             width: 70%;
         }
+
         .heroText {
             width: 100%;
+
             h1 {
                 padding-top: 75px;
                 padding-bottom: 25px;
-                @media(max-width:768px){
+
+                @media(max-width:768px) {
                     font-size: 36px;
-                      padding-top: 15px;
+                    padding-top: 15px;
 
                 }
             }
@@ -28,6 +32,7 @@
                 width: 80%;
                 color: App.$fontPrimaryColorLight;
                 padding-bottom: 50px;
+                font-size: 19px;
 
             }
 
@@ -38,13 +43,15 @@
                 width: 80%;
                 margin: auto;
                 padding-bottom: 100px;
-                
+
                 h6 {
                     font-size: 17px;
                     white-space: nowrap;
                 }
-                @media(max-width:992px){
-                    flex-direction: column;;
+
+                @media(max-width:992px) {
+                    flex-direction: column;
+                    ;
                     gap: 20px;
 
                 }
@@ -53,17 +60,17 @@
 
 
         .heroImg {
-            @media(max-width:768px){
-                display: none;
-            }
-
             width: 100%;
             height: auto;
+
+            @media(max-width:768px) {
+                display: none;
+            }
 
             img {
                 width: 100%;
                 height: auto;
-                
+
             }
         }
     }
@@ -71,15 +78,94 @@
 
 .featuresWrapper {
     @include App.centeredContent;
-    .featuresBox{
+    padding-bottom: 100px;
+
+    .featuresBox {
         display: flex;
         width: 70%;
+        gap: 75px;
         justify-content: space-between;
-        @media(max-width:992px){
+
+        @media(max-width:992px) {
             display: block;
             text-align: center;
         }
 
     }
 
+}
+
+.contentWrapper1 {
+    @include App.centeredContent;
+    background-color: rgb(151, 151, 151, 0.1);
+    padding: 100px 0px;
+
+    .contentBox1 {
+        display: flex;
+        width: 70%;
+        gap: 100px;
+
+        .contentText1 {
+            display: grid;
+            text-align: left;
+            grid-template-rows: max-content max-content max-content;
+            gap: 30px;
+
+            p {
+                font-size: 19px;
+            }
+
+        }
+
+        .contentImg1 {
+            img {
+                width: 90%;
+            }
+        }
+
+        @media (max-width:992px) {
+            flex-direction: column;
+
+            .contentImg1 {
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+}
+
+.factsWrapper {
+    @include App.centeredContent;
+    padding: 100px 0px;
+    border-bottom: 2px solid #E7E9ED;
+
+    .factsBox {
+        width: 70%;
+        display: flex;
+
+        .fact {
+            display: flex;
+            align-items: center;
+            text-align: left;
+
+            h1 {
+                padding-right: 20px;
+            }
+
+            p {
+                padding-right: 40px;
+            }
+        }
+
+        @media(max-width:992px) {
+            flex-direction: column;
+
+            .fact {
+                margin: auto;
+                padding-top: 30px;
+            }
+        }
+    }
 }
