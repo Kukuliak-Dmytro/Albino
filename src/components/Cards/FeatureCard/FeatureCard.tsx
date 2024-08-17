@@ -9,7 +9,7 @@ interface FeatureCardProps {
 const FeatureCard: React.FC<FeatureCardProps> = ({ logoPath, headerText, paragraphText }) => {
     return (
         <div className={styles.cardWrapper}>
-            <img src={logoPath} alt="" />
+            <img src={logoPath} alt="Management" />
             <h6>{headerText}</h6>
             <p>{paragraphText}</p>
 

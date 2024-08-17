@@ -5,7 +5,7 @@ export default function HeaderComponent() {
     const [menuCollapsed, setMenuCollapsed] = useState(true);
     return (
         <>
-            <div className={styles.headerWrapper}>
+            <div className={`${styles.headerWrapper} ${menuCollapsed ? '' : styles.headerShown}`}>
                 <div className={styles.headerLeft}><h5>Brainwave.io</h5></div>
                 <div className={`${styles.headerCenter} ${menuCollapsed ? '' : styles.shown}`}>
                     <ul>
