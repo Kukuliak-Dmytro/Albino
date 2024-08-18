@@ -97,7 +97,7 @@
 
 .contentWrapper1 {
     @include App.centeredContent;
-    background-color: rgb(151, 151, 151, 0.1);
+    background-color: hsla(0, 0%, 59%, 0.1);
     padding: 100px 0px;
 
     .contentBox1 {
@@ -210,6 +210,53 @@
 
 
 
+            }
+        }
+    }
+}
+
+.testimonialWrapper {
+    background-color: hsla(0, 0%, 59%, 0.1);
+
+    .testimonialBox {
+
+        min-height: 520px;
+        display: flex;
+        text-align: center;
+        justify-content: space-evenly;
+        align-items: center;
+
+        @media(max-width:768px) {
+            flex-direction: column;
+        }
+
+        .testimonial {
+            @media(max-width:768px) {
+                padding:40px 0px
+            }
+            img {
+                width: 140px;
+                height: 140px;
+                margin-bottom: 50px;
+            }
+
+            h5 {
+                padding-bottom: 30px;
+            }
+
+            p:nth-of-type(1) {
+                width: 60%;
+                margin: auto;
+                padding-bottom: 30px;
+                font-size: 19px;
+            }
+
+            h6 {
+                font-size: 17px;
+            }
+
+            p:nth-of-type(2) {
+                font-size: 15px;
             }
         }
     }

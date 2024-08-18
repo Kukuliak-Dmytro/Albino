@@ -14,6 +14,10 @@ import featureImg1 from '../../assets/featureImg3.png'
 import contentImg1 from '../../assets/contentImg1.png'
 import contentImg2 from '../../assets/contentImg2.png'
 
+import testimonialImg1 from '../../assets/testimonialImg1.png'
+import testimonialImg2 from '../../assets/testimonialImg2.png'
+
+
 
 
 
@@ -87,6 +91,26 @@ export function Home() {
                      <StepCard listNumber={3} headerText="Make it done on-time" paragraphText="With lots of unique blocks, you can easily build a page without coding. "></StepCard>
                   </div>
                </div>
+            </div>
+         </div>
+         <div className={styles.testimonialWrapper}>
+            
+            <div className={styles.testimonialBox}>
+                  <div className={styles.testimonial}>
+                     <img src={testimonialImg1} alt="" />
+                     <h5>“You made it so simple”</h5>
+                     <p>My new site is so much faster and easier to work with than my old site.</p>
+                     <h6>Corey Valdez</h6>
+                     <p>Founder at Zenix</p>
+                  </div>
+                  <div className={styles.testimonial}>
+                     <img src={testimonialImg2} alt="" />
+                     <h5>“Simply the best”</h5>
+                     <p>Better than all the rest. I’d recommend this product to beginners.</p>
+                     <h6>Ian Klein</h6>
+                     <p>Digital Marketer</p>
+                  </div>
+
             </div>
          </div>
       </>)
