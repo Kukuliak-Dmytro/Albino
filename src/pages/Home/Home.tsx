@@ -1,6 +1,7 @@
 import HeaderComponent from "../../components/HeaderComponent/HeaderComponent"
 import Button from "../../components/Buttons/Button"
 import FeatureCard from "../../components/Cards/FeatureCard/FeatureCard"
+import StepCard from "../../components/Cards/StepCard/StepCard"
 
 import styles from './Home.module.scss'
 
@@ -11,6 +12,8 @@ import featureImg3 from '../../assets/featureImg2.png'
 import featureImg1 from '../../assets/featureImg3.png'
 
 import contentImg1 from '../../assets/contentImg1.png'
+import contentImg2 from '../../assets/contentImg2.png'
+
 
 
 
@@ -70,7 +73,22 @@ export function Home() {
 
             </div>
          </div>
-
+         <div className={styles.contentWrapper2}>
+            <div className={styles.contentBox2}>
+               <div className={styles.contentText2}>
+                  <h2>Manage your projects fast</h2>
+                  <p>With lots of unique blocks, you can easily build a page without coding. Build your next landing page.</p>
+               </div>
+               <div className={styles.contentImg2}>
+                  <div><img src={contentImg2} alt="" /></div>
+                  <div className={styles.stepsBox}>
+                     <StepCard listNumber={1} headerText="Create a project" paragraphText="With lots of unique blocks, you can easily build a page without coding. "></StepCard>
+                     <StepCard listNumber={2} headerText="Assign related people" paragraphText="With lots of unique blocks, you can easily build a page without coding. "></StepCard>
+                     <StepCard listNumber={3} headerText="Make it done on-time" paragraphText="With lots of unique blocks, you can easily build a page without coding. "></StepCard>
+                  </div>
+               </div>
+            </div>
+         </div>
       </>)
 
 }

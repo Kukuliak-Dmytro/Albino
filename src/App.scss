@@ -1,9 +1,9 @@
-$primaryColor: #161C2D;
-$secondaryColor: #473BF0;
-$fontPrimaryColor: #161C2D;
-$fontPrimaryColorLight: rgba(22, 28, 45, 0.65);
-$FontSecondaryColor: #FFFFFF;
-$FontSecondaryColorLight: #FFFFFF;
+$primaryColor: hsl(224, 34%, 13%);
+$secondaryColor: hsla(244, 86%, 59%);
+$fontPrimaryColor: hsl(224, 34%, 13%);
+$fontPrimaryColorLight: hsla(224, 34%, 13%, 0.65);
+$FontSecondaryColor: hsl(0, 0%, 100%);
+$FontSecondaryColorLight: hsl(0, 0%, 100%);
 
 * {
   padding: 0px;
@@ -15,10 +15,13 @@ $FontSecondaryColorLight: #FFFFFF;
 
 h1 {
   font-size: 48px;
+  letter-spacing: -1.2px;
 }
 
 h2 {
   font-size: 36px;
+  letter-spacing: -1.2px;
+
 }
 
 h3 {

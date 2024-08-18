@@ -1,0 +1,24 @@
+@use '/src/App.scss';
+
+.cardWrapper {
+    display: flex;
+    text-align: left;
+    padding-bottom: 30px;
+    margin-top:30px;
+    div:nth-child(1) {     
+        @include App.centeredContent;
+        flex: 0  0 auto;
+        width: 43px;
+        height: 43px;
+        border-radius: 50%;
+        background-color: hsla(244, 86%, 59%, 0.1);
+        color: App.$secondaryColor;
+        margin-right: 20px;
+        font-weight: 600;
+    } div:nth-child(2){
+
+        h6{
+            padding-bottom: 20px;
+        }
+    }
+}
