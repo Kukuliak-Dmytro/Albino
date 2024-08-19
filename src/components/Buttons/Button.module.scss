@@ -2,7 +2,7 @@
 .buttonWrapper {
     @include App.centeredContent;
     background-color: App.$secondaryColor;
-    color: App.$FontSecondaryColorLight;
+    color: App.$FontSecondaryColor;
     border-radius: 8px;
     text-align: center;
     cursor: pointer;

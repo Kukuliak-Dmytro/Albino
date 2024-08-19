@@ -2,6 +2,7 @@ import HeaderComponent from "../../components/HeaderComponent/HeaderComponent"
 import Button from "../../components/Buttons/Button"
 import FeatureCard from "../../components/Cards/FeatureCard/FeatureCard"
 import StepCard from "../../components/Cards/StepCard/StepCard"
+import PricingCard from "../../components/Cards/PricingCard/PricingCard"
 
 import styles from './Home.module.scss'
 
@@ -94,24 +95,72 @@ export function Home() {
             </div>
          </div>
          <div className={styles.testimonialWrapper}>
-            
+
             <div className={styles.testimonialBox}>
-                  <div className={styles.testimonial}>
-                     <img src={testimonialImg1} alt="" />
-                     <h5>“You made it so simple”</h5>
-                     <p>My new site is so much faster and easier to work with than my old site.</p>
-                     <h6>Corey Valdez</h6>
-                     <p>Founder at Zenix</p>
-                  </div>
-                  <div className={styles.testimonial}>
-                     <img src={testimonialImg2} alt="" />
-                     <h5>“Simply the best”</h5>
-                     <p>Better than all the rest. I’d recommend this product to beginners.</p>
-                     <h6>Ian Klein</h6>
-                     <p>Digital Marketer</p>
-                  </div>
+               <div className={styles.testimonial}>
+                  <img src={testimonialImg1} alt="" />
+                  <h5>“You made it so simple”</h5>
+                  <p>My new site is so much faster and easier to work with than my old site.</p>
+                  <h6>Corey Valdez</h6>
+                  <p>Founder at Zenix</p>
+               </div>
+               <div className={styles.testimonial}>
+                  <img src={testimonialImg2} alt="" />
+                  <h5>“Simply the best”</h5>
+                  <p>Better than all the rest. I’d recommend this product to beginners.</p>
+                  <h6>Ian Klein</h6>
+                  <p>Digital Marketer</p>
+               </div>
 
             </div>
+         </div>
+         <div className={styles.pricingWrapper}>
+            <div className={styles.pricingBox}>
+               <h2>Pricing & Plans</h2>
+               <span>
+                  <p>With lots of unique blocks, you can easily build a page without coding. Build your next landing page.</p>
+               </span>
+               <div className={styles.pricingCards}>
+                  <PricingCard tier="BASIC" price={29}></PricingCard>
+                  <PricingCard tier="STANDART" price={49}></PricingCard>
+                  <PricingCard tier="PREMIUM" price={99}></PricingCard>
+               </div>
+               <div className={styles.faq}>
+                  <div className={styles.question}>
+                     <div>?</div>
+                     <div>
+                        <h6>Can I use Albino for my clients?</h6>
+                        <p>With lots of unique blocks, you can easily build a page without coding. Build your next landing page. Integer ut Oberyn massa. Sed feugiat vitae turpis a porta. Aliquam sagittis interdum Melisandre.</p>
+                        <a href="#">Click to learn more &#8594;</a>
+                     </div>
+                  </div>
+                  <div className={styles.question}>
+                     <div>?</div>
+                     <div>
+                        <h6>Does it work with WordPress?</h6>
+                        <p>With lots of unique blocks, you can easily build a page without coding. Build your next landing page. Integer ut Oberyn massa. Sed feugiat vitae turpis a porta. Aliquam sagittis interdum Melisandre.</p>
+                     </div>
+                  </div>
+                  <div className={styles.question}>
+                     <div>?</div>
+                     <div>
+                        <h6>Do I get free updates?</h6>
+                        <p>With lots of unique blocks, you can easily build a page without coding. Build your next landing page. Integer ut Oberyn massa. Sed feugiat vitae turpis a porta. Aliquam sagittis interdum Melisandre.</p>
+                     </div>
+                  </div>
+                  <div className={styles.question}>
+                     <div>?</div>
+                     <div>
+                        <h6>Will you provide support?</h6>
+                        <p>With lots of unique blocks, you can easily build a page without coding. Build your next landing page. Integer ut Oberyn massa. Sed feugiat vitae turpis a porta. Aliquam sagittis interdum Melisandre.</p>
+                     </div>
+                  </div>
+
+               </div>
+               <div className={styles.contact}>Haven't got your answer? <a href="">Contact our support now</a></div>
+               
+            </div>
+
          </div>
       </>)
 
