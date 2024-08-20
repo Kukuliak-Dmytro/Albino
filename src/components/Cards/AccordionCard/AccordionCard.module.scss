@@ -1,0 +1,61 @@
+@use '../../../App.scss';
+.cardWrapper {
+    display: grid;
+    position: relative;
+    max-width: 400px;
+
+    h6 {
+        color: App.$FontSecondaryColor;
+        padding-bottom: 20px;
+        font-weight: 600;
+
+    }
+
+    p {
+        color: App.$FontSecondaryColorLight;
+        font-weight: 400;
+
+    }
+    a{
+        color: #68D585;
+        font-weight: 700;
+       position: absolute;
+       bottom: -30%;
+       transition: 0.3s ease-in-out;
+       &:hover{
+        transform: translateX(5%);
+       }
+    }
+    div:nth-of-type(1){
+        display: flex;
+        @media(max-width:768px){
+            margin: auto;
+        }
+    }
+
+    button {
+        background-color: #68D585;
+        width: 30px;
+        height: 30px;
+        flex: 0 0 auto;
+        @include App.centeredContent;
+        border-radius: 50%;
+        color: white;
+        margin-right: 15px;
+        border: none;
+        @media(max-width:768px){
+        cursor: pointer;
+
+        }
+    }
+    .accordionBody{
+        overflow: hidden;
+        transition: 0.5s cubic-bezier(0.4, 0, 1, 1);
+        @media(max-width:768px){
+            height: 0px;
+            &.shown{
+                height:120px ;
+            }
+        }
+    }
+}

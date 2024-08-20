@@ -265,10 +265,11 @@
 
 .pricingWrapper {
     width: 100%;
-    height: 1600px;
+    height: max-content;
     background-color: App.$fontPrimaryColor;
     @include App.centeredContent;
     color: App.$FontSecondaryColor;
+    padding: 100px 0px;
 
     p,
     h2 {
@@ -276,10 +277,11 @@
     }
 
     .pricingBox {
-        width: 1100px;
-
+        width: 80%;
+        margin: auto;
+        
         span p {
-            width: 50%;
+            max-width:450px;
             margin: auto;
             font-weight: 400;
             color: App.$FontSecondaryColorLight;
@@ -289,58 +291,53 @@
 
         .pricingCards {
             display: flex;
-            gap: 25px;
+            width: 100%;
+            margin: auto;
+            justify-content: center;
+            position: relative;
+            @media(max-width:992px){
+               justify-content: left;
+                overflow-x: scroll;
+                width: 90%;
+               
+            }
         }
 
         .faq {
+            width:100%;
             display: grid;
             gap: 100px 25px;
             grid-template-columns: 50% 50%;
             text-align: left;
             padding-top: 200px;
-
-            .question {
-                display: flex;
-                position: relative;
-
-                h6 {
-                    color: App.$FontSecondaryColor;
-                    padding-bottom: 20px;
-                    font-weight: 600;
-
-                }
-
-                p {
-                    color: App.$FontSecondaryColorLight;
-                    font-weight: 400;
-
-                }
-                a{
-                    color: #68D585;
-                    font-weight: 700;
-                   position: absolute;
-                   bottom: -30%;
-                   transition: 0.3s ease-in-out;
-                   &:hover{
-                    transform: translateX(5%);
-                   }
-                }
-
-                div:nth-of-type(1) {
-                    background-color: #68D585;
-                    width: 30px;
-                    height: 30px;
-                    flex: 0 0 auto;
-                    @include App.centeredContent;
-                    border-radius: 50%;
-                    color: white;
-                    margin-right: 15px;
+            //aligns the items inside the grid cells
+            justify-items: center;
+            justify-content:center ;
+            margin: auto;
+            position: relative;
+            @media(max-width:768px){
+                grid-template-columns: 80%;
+                gap: 25px 25px;
+                padding-top: 100px;
+            }
+            a{
+                position: absolute;
+                color: #68D585;
+                left: 11%;
+                top: 60%;
+                font-weight: 700;
+                @media(max-width:768px){
+                    display: none;
                 }
             }
+
+            
         }
         .contact{
             color: white;
-            padding-top: 100px;
+            @media(max-width:768px){
+                margin-top: 100px;
+            }
             a{
                 color:#68D585;
             }

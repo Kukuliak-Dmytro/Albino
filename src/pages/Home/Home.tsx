@@ -3,7 +3,7 @@ import Button from "../../components/Buttons/Button"
 import FeatureCard from "../../components/Cards/FeatureCard/FeatureCard"
 import StepCard from "../../components/Cards/StepCard/StepCard"
 import PricingCard from "../../components/Cards/PricingCard/PricingCard"
-
+import AccordionCard  from "../../components/Cards/AccordionCard/AccordionCard"
 import styles from './Home.module.scss'
 
 import heroImg from '../../assets/heroImg.png'
@@ -126,35 +126,12 @@ export function Home() {
                   <PricingCard tier="PREMIUM" price={99}></PricingCard>
                </div>
                <div className={styles.faq}>
-                  <div className={styles.question}>
-                     <div>?</div>
-                     <div>
-                        <h6>Can I use Albino for my clients?</h6>
-                        <p>With lots of unique blocks, you can easily build a page without coding. Build your next landing page. Integer ut Oberyn massa. Sed feugiat vitae turpis a porta. Aliquam sagittis interdum Melisandre.</p>
-                        <a href="#">Click to learn more &#8594;</a>
-                     </div>
-                  </div>
-                  <div className={styles.question}>
-                     <div>?</div>
-                     <div>
-                        <h6>Does it work with WordPress?</h6>
-                        <p>With lots of unique blocks, you can easily build a page without coding. Build your next landing page. Integer ut Oberyn massa. Sed feugiat vitae turpis a porta. Aliquam sagittis interdum Melisandre.</p>
-                     </div>
-                  </div>
-                  <div className={styles.question}>
-                     <div>?</div>
-                     <div>
-                        <h6>Do I get free updates?</h6>
-                        <p>With lots of unique blocks, you can easily build a page without coding. Build your next landing page. Integer ut Oberyn massa. Sed feugiat vitae turpis a porta. Aliquam sagittis interdum Melisandre.</p>
-                     </div>
-                  </div>
-                  <div className={styles.question}>
-                     <div>?</div>
-                     <div>
-                        <h6>Will you provide support?</h6>
-                        <p>With lots of unique blocks, you can easily build a page without coding. Build your next landing page. Integer ut Oberyn massa. Sed feugiat vitae turpis a porta. Aliquam sagittis interdum Melisandre.</p>
-                     </div>
-                  </div>
+                 <AccordionCard     />
+                 <AccordionCard     />
+                 <AccordionCard     />
+                 <AccordionCard     />
+              <a href="#">Click to learn more &#8594;</a>
+                  
 
                </div>
                <div className={styles.contact}>Haven't got your answer? <a href="">Contact our support now</a></div>

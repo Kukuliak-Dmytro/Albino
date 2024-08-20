@@ -13,7 +13,7 @@ const PricingCard: React.FC<PricingCardProps> = ({ tier, price }) => {
             <h1>${price}</h1>
             <p>One time purchase</p>
             <p>With lots of unique blocks, you can easily build a page without coding. Build your next landing page.</p>
-            <Button width={300}>Get started for free</Button>
+            <Button width={250}>Get started for free</Button>
 
         </div >
     )
