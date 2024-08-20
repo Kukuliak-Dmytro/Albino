@@ -307,7 +307,7 @@
             width:100%;
             display: grid;
             gap: 100px 25px;
-            grid-template-columns: 50% 50%;
+            grid-template-columns: 40% 40%;
             text-align: left;
             padding-top: 200px;
             //aligns the items inside the grid cells
@@ -323,7 +323,7 @@
             a{
                 position: absolute;
                 color: #68D585;
-                left: 11%;
+                left: 15.5%;
                 top: 60%;
                 font-weight: 700;
                 @media(max-width:768px){
@@ -335,12 +335,56 @@
         }
         .contact{
             color: white;
-            @media(max-width:768px){
+          
                 margin-top: 100px;
-            }
+            
             a{
                 color:#68D585;
             }
+        
         }
     }
+}
+
+.ctaWrapper{
+    width: 100%;
+    border-bottom: 2px solid #E7E9ED;
+    height: 200px;
+    @include App.centeredContent;
+    .ctaBox{
+        display: flex;
+        justify-content: space-between;
+        .ctaText{
+            text-align: left;
+            width: 45%;
+            h3{
+                padding-bottom: 20px;
+            }
+        }
+        .ctaButtons{
+                display: flex;
+                align-items: center;
+                gap: 20px;
+                button:nth-of-type(1){
+                    height: 50px;
+                    border: none;
+                    border-radius: 8px;
+                    font-size: 17px;
+                    padding: 0px 15px;
+                    background-color: hsla(244, 86%, 59%, 0.1);
+                    color:hsla(244, 86%, 59%, 1);
+                    font-weight:700;
+                    cursor: pointer;
+                    transition: 0.3s;
+                    white-space: nowrap;
+                    &:hover{
+                        scale:1.05
+                    }
+                    &:active{
+                        scale:0.95
+                    }
+                }
+        }
+    }
+
 }

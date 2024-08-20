@@ -139,6 +139,18 @@ export function Home() {
             </div>
 
          </div>
+         <div className={styles.ctaWrapper}>
+            <div className={styles.ctaBox}>
+               <div className={styles.ctaText}>
+                  <h3>Build better landing page fast</h3>
+                  <p>With lots of unique blocks, you can easily build a page without coding. Build your next landing page.</p>
+               </div>
+               <div className={styles.ctaButtons}>
+                  <button>Learn more &#8594;</button>
+                  <Button height={50}>Get it now &#8594;  </Button>
+               </div>
+            </div>
+         </div>
       </>)
 
 }
