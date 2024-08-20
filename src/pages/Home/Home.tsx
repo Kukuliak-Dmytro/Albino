@@ -4,6 +4,7 @@ import FeatureCard from "../../components/Cards/FeatureCard/FeatureCard"
 import StepCard from "../../components/Cards/StepCard/StepCard"
 import PricingCard from "../../components/Cards/PricingCard/PricingCard"
 import AccordionCard  from "../../components/Cards/AccordionCard/AccordionCard"
+import FooterComponent from "../../components/FooterComponent/FooterComponent"
 import styles from './Home.module.scss'
 
 import heroImg from '../../assets/heroImg.png'
@@ -151,6 +152,7 @@ export function Home() {
                </div>
             </div>
          </div>
+         <FooterComponent></FooterComponent>
       </>)
 
 }
