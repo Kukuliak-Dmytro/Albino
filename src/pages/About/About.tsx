@@ -1,6 +1,8 @@
 import HeaderComponent from "../../components/HeaderComponent/HeaderComponent";
 import FooterComponent from "../../components/FooterComponent/FooterComponent";
 import TeammateCard from "../../components/Cards/TeammateCard/TeammateCard";
+import ApplyCard from "../../components/Cards/TeammateCard/ApplyCard";
+
 
 import styles from './About.module.scss'
 
@@ -108,12 +110,7 @@ export function About() {
                             paragraphText="UX Designer"
                             description="Isaiah is our UX designer, focused on creating seamless and intuitive user experiences. His designs are not only beautiful but also highly functional."
                         />
-
-                        <div className={styles.applyCard}>
-                            <h5>Interested to join
-                                our team ?</h5>
-                            <a href="">Apply now  &#8594;</a>
-                        </div>
+                        <ApplyCard></ApplyCard>
 
                     </div>
                 </div>

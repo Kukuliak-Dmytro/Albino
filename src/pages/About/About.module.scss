@@ -132,25 +132,27 @@
 
     @media(max-width:768px) {
         padding-top: 50px;
-        padding-bottom: 50px; 
+        padding-bottom: 50px;
 
 
         .contentBox {
             flex-direction: column-reverse;
-             width: 80%;
-             gap: 50px;
-             .contentText{
+            width: 80%;
+            gap: 50px;
+
+            .contentText {
                 width: 100%;
 
-                h1{
+                h1 {
                     font-size: 30px;
                     padding-bottom: 30px;
                 }
+
                 p:nth-of-type(1) {
                     display: none;
                 }
-             }
-            
+            }
+
         }
     }
 }
@@ -186,32 +188,18 @@
                 }
             }
 
-            .applyCard {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                text-align: left;
-                gap: 30px;
-
-                a {
-                    font-weight: 800;
-                    color: App.$secondaryColor;
-                    transition: 0.3s;
-
-                    &:hover {
-                        transform: translateX(5%);
-                    }
-                }
-            }
-        }
+                   }
     }
-    @media(max-width:768px){
-        .teamBox{
+
+    @media(max-width:768px) {
+        .teamBox {
             width: 90%;
-            >h1{
+
+            >h1 {
                 font-size: 30px;
             }
-            >p{
+
+            >p {
                 width: 100%;
                 font-size: 17px;
             }

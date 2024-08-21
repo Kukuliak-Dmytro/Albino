@@ -1,0 +1,91 @@
+@use '../../../App.scss';
+
+.cardWrapper {
+    text-align: left;
+    position: relative;
+    display: inline-block;
+    h5, a{
+        color: App.$FontSecondaryColor ;
+    }
+  
+    .hoverWrapper:hover{
+        .flipWrapper{
+            transform: rotateY(180deg);
+
+        }
+    }
+    .flipWrapper {
+        position: relative;
+        width: 100%;
+        // height based on padding, which is in turn based on width
+        padding-bottom: 133%;
+        transform-style: preserve-3d;
+        transition: all 0.75s ease;
+        transition-delay: 0.05s;
+       
+    
+        .front,
+        .back {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 12px;
+            border: 3px solid App.$primaryColor;
+            border-radius: 12px;
+            @include App.centeredContent;
+            flex-direction: column;
+            img {
+                width: 100%;
+                height: auto;
+                opacity: 0;
+               
+            }
+        }
+
+        .front {
+            h5{
+                color: App.$fontPrimaryColor;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                padding: 10px;
+                text-align: center;
+                font-size: 36px;
+                @media(max-width: 768px){
+                    font-size: 24px;
+                }
+            }
+        }
+
+        .back {
+            transform: rotateY(180deg);
+            background-color: App.$primaryColor;
+            padding: 15px;
+            text-align: center;
+            h5{
+                font-size: 15px;
+            }
+            a{
+                font-size: 13px;
+                color: App.$secondaryColor;
+                margin-top: 30px;
+                font-weight: 700;
+            }
+            @media(min-width:992px){
+                h5{
+                    font-size: 30px;
+                }
+                a{
+                    font-size: 21px;
+                }
+            }
+
+
+        }
+    }
+
+   
+}
