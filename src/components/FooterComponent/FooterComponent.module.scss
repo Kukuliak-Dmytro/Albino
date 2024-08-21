@@ -10,7 +10,7 @@
         .innerFooterWrapper {
             display: grid;
             height: max-content;
-            margin: 125px 0px;
+            margin: 75px 0px;
             justify-content: space-between;
             grid-template-columns: 40% 15% 15% 15% 15%;
             padding: 20px;
@@ -19,7 +19,6 @@
 
                 @media(max-width:769px) {
                     grid-template-columns: 40% 40%;
-                    margin-bottom: 300px;
                 }
             }
            

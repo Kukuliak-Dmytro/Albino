@@ -13,8 +13,8 @@ import featureImg2 from '../../assets/featureImg1.png'
 import featureImg3 from '../../assets/featureImg2.png'
 import featureImg1 from '../../assets/featureImg3.png'
 
-import contentImg1 from '../../assets/contentImg1.png'
-import contentImg2 from '../../assets/contentImg2.png'
+import contentImg1 from '../../assets/homeContentImg1.png'
+import contentImg2 from '../../assets/homeContentImg2.png'
 
 import testimonialImg1 from '../../assets/testimonialImg1.png'
 import testimonialImg2 from '../../assets/testimonialImg2.png'
