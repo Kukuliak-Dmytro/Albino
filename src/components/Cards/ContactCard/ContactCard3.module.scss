@@ -1,0 +1,51 @@
+@use '../../../App.scss';
+
+.info {
+    display: flex;
+    padding: 25px;
+
+    button {
+        width: 54px;
+        height: 54px;
+        border-radius: 50%;
+        background-color: white;
+        border: 2px solid App.$primaryColor;
+        @include App.centeredContent;
+        margin-right: 20px;
+        cursor: pointer;
+        svg{
+            width: 60%;
+            height: 60%;
+        }
+
+
+
+
+    }
+
+    h5 {
+        padding-bottom: 20px;
+    }
+
+    p {
+        font-size: 21px;
+        padding-top: 5px;
+    }
+}
+
+.info {
+    button{
+        svg {
+        }
+
+        &:hover {
+            svg {
+            transition: 0.4s cubic-bezier(0.7, 0, 0.31, 0.98);
+            rotate: 180deg;
+
+            }
+
+
+        }
+    }
+}
