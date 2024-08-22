@@ -1,95 +1,116 @@
 @use '../../../App.scss';
+
 .info {
-    display: flex;
-    padding: 25px;
+  display: flex;
+  padding: 25px;
 
-    button {
-        width: 54px;
-        height: 54px;
-        border-radius: 50%;
-        background-color: white;
-        border: 2px solid App.$primaryColor;
-        @include App.centeredContent;
-        margin-right: 20px;
-        cursor: pointer;
-        svg{
-            width: 60%;
-            height: 60%;
-        }
+  button {
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    background-color: white;
+    border: 2px solid App.$primaryColor;
+    @include App.centeredContent;
+    margin-right: 20px;
+    cursor: pointer;
+    flex-shrink: 0;
+    transition: 0.4s cubic-bezier(0.7, 0, 0.31, 0.98);
 
-
-
-
+    svg {
+      width: 60%;
+      height: 60%;
     }
 
-    h5 {
-        padding-bottom: 20px;
-    }
 
-    p {
-        font-size: 21px;
-        padding-top: 5px;
-    }
+
+
+  }
+
+  h5 {
+    padding-bottom: 20px;
+  }
+
+  p {
+    font-size: 21px;
+    padding-top: 5px;
+  }
 }
 
 
 
-.info{
-   button {
+@media (hover: none) and (pointer: coarse) {
+  .info button {
+    svg {
 
-        svg {
-            transition: 0.4s cubic-bezier(0.7, 0, 0.31, 0.98);
-            rotate: 135deg;
-        }
-
-        &:hover {
-            svg {
-                rotate: 0deg;
-
-            }
-
-
-        }
-        
+      transition: none;
     }
+  }
 }
+
+@media (hover: hover) and (pointer: fine) {
+  .info button {
+    svg {
+      transition: 0.4s cubic-bezier(0.7, 0, 0.31, 0.98);
+      transform: rotate(135deg);
+    }
+
+    &:hover {
+      svg {
+        transform: rotate(0deg);
+      }
+    }
+  }
+}
+
+
+
 @keyframes phoneRing {
-    0% {
-        rotate: -15deg;
-      }
-      10% {
-        rotate: 15deg;
-      }
-      20% {
-        rotate: -18deg;
-      }
-      30% {
-        rotate: 18deg;
-      }
-      40% {
-        rotate: -21deg;
-      }
-      50% {
-        rotate: 21deg;
-      }
-      60% {
-        rotate: -18deg;
-      }
-      70% {
-        rotate: 18deg;
-      }
-      80% {
-        rotate: -15deg;
-      }
-      90% {
-        rotate: 15deg;
-      }
-      100% {
-        rotate: 0deg;
-      }
-    
-}
-.animate{
-    animation: phoneRing 0.5s cubic-bezier(0.7, 0, 0.31, 0.98) 0s 1;
+  0% {
+    rotate: -15deg;
+  }
+
+  10% {
+    rotate: 15deg;
+  }
+
+  20% {
+    rotate: -18deg;
+  }
+
+  30% {
+    rotate: 18deg;
+  }
+
+  40% {
+    rotate: -21deg;
+  }
+
+  50% {
+    rotate: 21deg;
+  }
+
+  60% {
+    rotate: -18deg;
+  }
+
+  70% {
+    rotate: 18deg;
+  }
+
+  80% {
+    rotate: -15deg;
+  }
+
+  90% {
+    rotate: 15deg;
+  }
+
+  100% {
+    rotate: 0deg;
+  }
+
 }
 
+.animate {
+  animation: phoneRing 0.4s cubic-bezier(0.7, 0, 0.31, 0.98) 0s 1;
+}
