@@ -18,7 +18,29 @@
             width: 60%;
             margin: auto;
         }
+        @media (max-width:992px) {
+            >h1:nth-of-type(1) {
+                font-size: 48px;
+                
+            }
+            >p {
+                font-size: 17px;
+              
+            }
+            @media(max-width:768px){
+                >h1:nth-of-type(1) {
+                    font-size: 36px;
+                }
+                >p {
+                    font-size: 17px;
+                    width: 80%;
+                  
+                }
+            }
+        }
+        
     }
+   
 }
 
 .infoWrapper {
@@ -28,12 +50,36 @@
 
     .infoBox {
         display: flex;
-        width: 70%;
+        width: 80%;
         justify-content: space-between;
         text-align: left;
+        @media(max-width:992px){
+            flex-direction: column;
+        align-items: center;
 
+        }
         
     }
 
 
+}
+.formWrapper{
+    background-color: #F4F7FA;
+    @include App.centeredContent;
+    padding-bottom: 200px;
+
+    .formBox{
+        background-color: white;
+        width: 80vw;
+        height: 600px;
+        border-radius: 10px;
+        margin-top: 50px;
+        box-shadow: 2px 2px 10px rgba(128, 128, 128, 0.523);
+        form{
+            width: 100%;
+            display: grid;
+            grid-template-columns: 45% 45%;
+            justify-content: space-evenly;
+        }
+    }
 }
