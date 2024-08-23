@@ -1,5 +1,6 @@
 @use '../../../App.scss';
 
+
 .info {
   display: flex;
   padding: 25px;
@@ -15,16 +16,48 @@
     cursor: pointer;
     flex-shrink: 0;
     transition: 0.4s cubic-bezier(0.7, 0, 0.31, 0.98);
+    position: relative;
 
     svg {
       width: 60%;
       height: 60%;
     }
-
-
-
-
   }
+
+  .alert {
+    width: 11rem;
+    height: 50px;
+    padding: 0.5rem;
+    align-content: center;
+    text-align: center;
+    position: absolute;
+    background-color: white;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    transition: 0.4s  cubic-bezier(0.7, 0, 0.31, 0.98);
+    opacity: 0;
+    pointer-events: none;
+    border-radius: 8px; 
+    &.active{
+      opacity: 1;
+      transform: translate(-50%, -1rem);
+    }
+    &::after {
+      content: "";
+      background-color: white;
+      width: 10px;
+      height: 10px;
+      position: absolute;
+      transform: translateX(50%) rotate(45deg);
+      right: 50%;
+      bottom: -5px;
+      z-index: -1;
+    }
+   
+  }
+
 
   h5 {
     padding-bottom: 20px;
@@ -37,21 +70,65 @@
 }
 
 
+@keyframes phoneRing {
+  0% {
+    transform: rotate(-15deg);
+  }
 
-@media (hover: none) and (pointer: coarse) {
-  .info button {
-    svg {
+  10% {
+    transform: rotate(15deg);
+  }
 
-      transition: none;
-    }
+  20% {
+    transform: rotate(-18deg);
+  }
+
+  30% {
+    transform: rotate(18deg);
+  }
+
+  40% {
+    transform: rotate(-21deg);
+  }
+
+  50% {
+    transform: rotate(21deg);
+  }
+
+  60% {
+    transform: rotate(-18deg);
+  }
+
+  70% {
+    transform: rotate(18deg);
+  }
+
+  80% {
+    transform: rotate(-15deg);
+  }
+
+  90% {
+    transform: rotate(15deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
   }
 }
 
+// Apply hover styles only if hover is supported
 @media (hover: hover) and (pointer: fine) {
   .info button {
     svg {
       transition: 0.4s cubic-bezier(0.7, 0, 0.31, 0.98);
       transform: rotate(135deg);
+    }
+
+    &.animate {
+      svg {
+        animation: phoneRing 0.4s cubic-bezier(0.7, 0, 0.31, 0.98) 0s 1;
+
+      }
     }
 
     &:hover {
@@ -62,55 +139,19 @@
   }
 }
 
+// Disable hover styles and transitions for touch devices
+@media (hover: none) and (pointer: coarse) {
+  .info button {
+    &.animate {
+      svg {
+        animation: phoneRing 0.4s cubic-bezier(0.7, 0, 0.31, 0.98) 0s 1;
 
+      }
+    }
 
-@keyframes phoneRing {
-  0% {
-    rotate: -15deg;
+    svg {
+      transform: rotate(0deg);
+
+    }
   }
-
-  10% {
-    rotate: 15deg;
-  }
-
-  20% {
-    rotate: -18deg;
-  }
-
-  30% {
-    rotate: 18deg;
-  }
-
-  40% {
-    rotate: -21deg;
-  }
-
-  50% {
-    rotate: 21deg;
-  }
-
-  60% {
-    rotate: -18deg;
-  }
-
-  70% {
-    rotate: 18deg;
-  }
-
-  80% {
-    rotate: -15deg;
-  }
-
-  90% {
-    rotate: 15deg;
-  }
-
-  100% {
-    rotate: 0deg;
-  }
-
-}
-
-.animate {
-  animation: phoneRing 0.4s cubic-bezier(0.7, 0, 0.31, 0.98) 0s 1;
 }
