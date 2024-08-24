@@ -1,0 +1,73 @@
+@use '../../App.scss';
+
+.supportWrapper {
+    width: 100%;
+    height: max-content;
+    padding: 100px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+
+    .supportBox {
+        width: 60%;
+
+        .title {
+            text-align: center;
+            width: 70%;
+            margin: auto;
+
+            p {
+                padding: 65px 0px;
+                font-size: 19px;
+            }
+        }
+
+        .body {
+            text-align: justify;
+
+            >div:nth-of-type(1) {
+                padding-bottom: 50px;
+            }
+
+
+            ul {
+                li {
+                    padding-bottom: 20px;
+                    margin-left: 20px;
+                    font-size: 17px;
+                    font-family: unset;
+                    color: App.$fontPrimaryColorLight;
+                    font-weight: 500;
+                }
+
+            }
+
+
+        }
+
+
+    }
+
+    @media(max-width:768px) {
+        .supportBox {
+            width: 85%;
+            text-align: justify;
+
+            .title {
+                width: 100%;
+
+                h1 {
+                    font-size: 36px;
+                }
+
+                p {
+                    width: 100%;
+                    font-weight: 700;
+                    color: App.$fontPrimaryColor;
+                }
+            }
+        }
+    }
+}

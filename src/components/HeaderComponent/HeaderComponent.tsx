@@ -14,7 +14,7 @@ export default function HeaderComponent() {
                     <ul>
                         <Link to='/Albino/about/'><li>About us</li></Link>
                         <Link to='/Albino/pricing/'><li>Pricing</li></Link>
-                        <Link to=''><li>Support</li></Link>
+                        <Link to='/Albino/support'><li>Support</li></Link>
                         <Link to='/Albino/contact'><li>Contact</li></Link>
                     </ul>
                 </div>

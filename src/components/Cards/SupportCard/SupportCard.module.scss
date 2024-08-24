@@ -1,0 +1,61 @@
+
+.cardWrapper{
+    padding-bottom: 50px;
+    height: min-content;
+    display: grid;
+
+    h6 {
+        font-size: 19px;
+        padding-bottom: 20px;
+    }
+
+    >div:nth-of-type(1) {
+        display: flex;
+        justify-content: space-between;
+        grid-template-rows: 1fr;
+        button {
+            height: 40px;
+            width: 40px;
+            border: none;
+            background-color: white;
+             display: flex;
+            flex-direction: column-reverse;
+            overflow: hidden;
+            cursor: pointer;
+            >div{
+                height: 80px;
+                transition: 0.4s cubic-bezier(0.7, 0, 0.31, 0.98);
+
+
+            }
+            svg{
+                width: 40px ;
+                height: 40px ;
+                flex-shrink: 0;
+                
+                
+            }
+            svg:nth-of-type(1){
+                rotate: 180deg;
+            }
+            &.moved{
+                >div{
+                transform: translateY(50%);
+                }
+            }
+        }
+    }
+
+    >div:nth-of-type(2) {
+        display: grid;
+        grid-template-rows: 0fr;
+        transition: 0.4s cubic-bezier(0.7, 0, 0.31, 0.98);
+        >*{
+            overflow: hidden;
+        }
+        &.open {
+        grid-template-rows: 1fr;
+          
+        }
+    }
+}

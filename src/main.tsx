@@ -6,6 +6,7 @@ import { Home } from "./pages/Home/Home.tsx";
 import { Contact } from "./pages/Contact/Contact.tsx";
 import { Pricing } from './pages/Pricing/Pricing.tsx';
 import { About } from './pages/About/About.tsx';
+import { Support } from './pages/Support/Support.tsx';
 
 const router = createBrowserRouter([
   {
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
       {
         path: "/Albino/about",
         element: <About />,
+      },
+      {
+        path: "/Albino/support",
+        element: <Support />,
       },
     ],
   },

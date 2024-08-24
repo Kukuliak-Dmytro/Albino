@@ -5,13 +5,15 @@
     width: 100%;
     margin: auto;
     height: 80px;
-    padding-top: 30px;
+    padding: 15px 0px;
     display: flex;
     justify-content: space-between;
     transition: 0.6s ease-in-out; 
     align-items: center;   
     @media(max-width:768px){
         align-items: start;
+        padding-top: 30px;
+        padding-bottom: 0px;
     }
     &.headerShown{
         height: 280px;
