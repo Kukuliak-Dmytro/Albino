@@ -36,9 +36,10 @@ export function Contact() {
                         <ContactForm id='email' label='Email' placeholder='i.e. john@mail.com'></ContactForm>
                         <ContactForm id='phone' label='Phone Number' placeholder='i.e. +1-234-567-7890'></ContactForm>
                         <ContactForm id='subject' label='Subject' placeholder='i.e. I need a help'></ContactForm>
-                        <ContactForm  area={true} id='subject' label='Subject' placeholder='i.e. I need a help'></ContactForm>
+                        <ContactForm  area={true} id='subject' label='Subject' placeholder='i.e. I need a help' ></ContactForm>
                      
                     </form>
+                    <button>Send</button>
                 </div>
             </div>
             <FooterComponent />

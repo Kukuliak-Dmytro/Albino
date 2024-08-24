@@ -71,15 +71,41 @@
     .formBox{
         background-color: white;
         width: 80vw;
-        height: 600px;
+        min-height: 600px;
         border-radius: 10px;
         margin-top: 50px;
         box-shadow: 2px 2px 10px rgba(128, 128, 128, 0.523);
         form{
             width: 100%;
-            display: grid;
-            grid-template-columns: 45% 45%;
-            justify-content: space-evenly;
-        }
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            padding: 25px;
+            justify-content: space-between ;
+            > *{
+                flex: 1 1 45%;
+            }
+            }
+            
+            button{
+                color: red;
+                margin-bottom: 25px;
+                height: 60px;
+                width: 220px;
+                background-color: App.$secondaryColor;
+                color: App.$FontSecondaryColor;
+                border-radius: 8px;
+                border: none;
+                font-size: 21px;
+                font-weight: 600;
+                cursor: pointer;
+                transition: 0.4s;
+                &:hover{
+                    scale: 1.05;
+                }
+                &:active{
+                    scale: 0.95;
+                }
+            }
     }
 }
