@@ -8,16 +8,19 @@
 
     .heroBox {
         width: 50%;
+        padding-top: 150px;
 
         @media (max-width:992px) {
             width: 70%;
+            @media(max-width:768px){
+                width: 90%;
+            }
         }
 
         .heroText {
             width: 100%;
 
             h1 {
-                padding-top: 75px;
                 padding-bottom: 25px;
 
                 @media(max-width:768px) {
@@ -89,6 +92,9 @@
         @media(max-width:992px) {
             display: block;
             text-align: center;
+            @media(max-width:768px){
+                width: 90%;
+            }
         }
 
     }
@@ -125,6 +131,9 @@
 
         @media (max-width:992px) {
             flex-direction: column;
+            @media(max-width:768px){
+                width: 90%;
+            }
 
             .contentImg1 {
                 img {
@@ -161,7 +170,9 @@
 
         @media(max-width:992px) {
             flex-direction: column;
-
+            @media(max-width:768px){
+                width: 90%;
+            }
             .fact {
                 margin: auto;
                 padding-top: 30px;
@@ -175,7 +186,9 @@
 
     .contentBox2 {
         width: 80%;
-
+        @media(max-width:768px){
+            width: 90%;
+        }
         .contentText2 {
 
             h2 {
@@ -188,6 +201,12 @@
                 width: 50%;
                 margin: auto;
                 padding-bottom: 100px;
+                @media(max-width:768px){
+                    
+                        width: 100%;
+                        margin: unset;
+                    
+                }
             }
         }
 
@@ -207,7 +226,9 @@
 
             .stepsBox {
                 padding-top: 50px;
-
+                @media(max-width:768px){
+                    width: 90%;
+                }
 
 
             }
@@ -217,7 +238,7 @@
 
 .testimonialWrapper {
     background-color: hsla(0, 0%, 59%, 0.1);
-
+    @include App.centeredContent;
     .testimonialBox {
 
         min-height: 520px;
@@ -228,11 +249,13 @@
 
         @media(max-width:768px) {
             flex-direction: column;
+            width: 90%;
         }
 
         .testimonial {
             @media(max-width:768px) {
                 padding: 40px 0px
+                
             }
 
             img {
@@ -250,6 +273,8 @@
                 margin: auto;
                 padding-bottom: 30px;
                 font-size: 19px;
+                @media(max-width:768px) {
+                    width: 90%;}
             }
 
             h6 {
@@ -298,13 +323,12 @@
             @media(max-width:992px){
                justify-content: left;
                 overflow-x: scroll;
-                width: 90%;
+                width: 100%;
                
             }
         }
 
         .faq {
-            width:100%;
             display: grid;
             gap: 100px 25px;
             grid-template-columns: 40% 40%;
@@ -313,7 +337,6 @@
             //aligns the items inside the grid cells
             justify-items: center;
             justify-content:center ;
-            margin: auto;
             position: relative;
             @media(max-width:768px){
                 grid-template-columns: 80%;
@@ -373,6 +396,9 @@
         @media(max-width: 992px){
             flex-direction: column;
             text-align: center;
+            @media(max-width:768px){
+                width: 90%;
+            }
         }
         .ctaButtons{
                 display: flex;

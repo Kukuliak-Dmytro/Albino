@@ -1,4 +1,5 @@
 @use '../../../App.scss';
+
 .cardWrapper {
     display: grid;
     position: relative;
@@ -16,19 +17,25 @@
         font-weight: 400;
 
     }
-    a{
+
+    a {
         color: #68D585;
         font-weight: 700;
-       position: absolute;
-       bottom: -30%;
-       transition: 0.3s ease-in-out;
-       &:hover{
-        transform: translateX(5%);
-       }
+        position: absolute;
+        bottom: -30%;
+        transition: 0.3s ease-in-out;
+
+        &:hover {
+            transform: translateX(5%);
+        }
     }
-    div:nth-of-type(1){
+
+    div:nth-of-type(1) {
         display: flex;
-        @media(max-width:768px){
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        width: 100%;
+        @media(max-width:768px) {
             margin: auto;
         }
     }
@@ -43,19 +50,27 @@
         color: white;
         margin-right: 15px;
         border: none;
-        @media(max-width:768px){
-        cursor: pointer;
+
+        @media(max-width:768px) {
+            cursor: pointer;
 
         }
     }
-    .accordionBody{
-        overflow: hidden;
-        transition: 0.5s cubic-bezier(0.4, 0, 1, 1);
-        @media(max-width:768px){
-            height: 0px;
-            &.shown{
-                height:120px ;
-            }
+
+    .accordionBody {
+        display: grid;
+        grid-template-rows: 1fr;
+        transition: 0.4s cubic-bezier(0.7, 0, 0.31, 0.98);
+        @media (max-width:768px) {
+        grid-template-rows: 0fr;
+            
+        }
+        >* {
+            overflow: hidden;
+        }
+
+        &.shown {
+            grid-template-rows: 1fr;
         }
     }
 }

@@ -1,6 +1,10 @@
 import { useState } from "react";
 import styles from './AccordionCard.module.scss'
-export default function AccordionCard({ }) {
+interface AccordionCardProps {
+    header: string;
+    content: string;
+}
+export default function AccordionCard({ header, content }: AccordionCardProps) {
     const [accorionCollapsed, setAccordionCollapsed] = useState(true);
     function symbol() {
         if (window.innerWidth <= 768) {
@@ -13,11 +17,11 @@ export default function AccordionCard({ }) {
     return <div className={styles.cardWrapper}>
         <div>
             <button onClick={() => setAccordionCollapsed(!accorionCollapsed)}>{symbol()}</button>
-            <h6>Can I use Albino for my clients?</h6>
+            <h6>{header}</h6>
         </div>
 
         <div className={`${styles.accordionBody} ${accorionCollapsed ? ' ' : styles.shown}`}>
-            <p>With lots of unique blocks, you can easily build a page without coding. Build your next landing page. Integer ut Oberyn massa. Sed feugiat vitae turpis a porta. Aliquam sagittis interdum Melisandre.</p>
+           <p>{content}</p>
         </div>
     </div>;
 }

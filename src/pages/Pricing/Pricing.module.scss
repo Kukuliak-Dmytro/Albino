@@ -4,12 +4,11 @@
     height: max-content;
 
     @include App.centeredContent;
-    color: App.$FontSecondaryColor;
     padding: 100px 0px;
 
     p,
     h2 {
-        color: App.$FontSecondaryColor;
+        color: App.$fontPrimaryColor;
     }
 
     .pricingBox {
@@ -20,7 +19,7 @@
             max-width:450px;
             margin: auto;
             font-weight: 400;
-            color: App.$FontSecondaryColorLight;
+            color: App.$fontPrimaryColor;
             padding-bottom: 100px;
 
         }
@@ -34,7 +33,7 @@
             @media(max-width:992px){
                justify-content: left;
                 overflow-x: scroll;
-                width: 90%;
+                width: 100%;
                
             }
         }
